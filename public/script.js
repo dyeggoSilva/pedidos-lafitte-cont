@@ -28,6 +28,7 @@ const telefoneInput = document.getElementById('telefone');
         const dataPedido= document.getElementById("data_pedido").value;
         const dataPagamento= document.getElementById("data_pagamento").value;
         const vendedor=document.getElementById("vendedor").value;
+         const valorPedido=document.getElementById("vendedor").value;
 
       const dados = {
         nome: nome,
@@ -36,7 +37,8 @@ const telefoneInput = document.getElementById('telefone');
         produtos: produtos,
         dataPedido: dataPedido,
         dataPagamento: dataPagamento,
-        vendedor: vendedor
+        vendedor: vendedor,
+        valorPedido: valorPedido
       }
 
       fetch(url+"/pedidos", {

@@ -4,18 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro de Pedido</title>
-    <link href="/public/style.css" rel="stylesheet"
+    <link href="style.css" rel="stylesheet"
   </head>
   <body>
     <div class="sidebar">
-      <div>
-        <h2>Cadastro de Pedido</h2>
-        <p>Preencha as informações abaixo para registrar um novo pedido.</p>
-      </div>
       <img
-        src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df"
+        src="./assets/logolafitte.png"
         alt="Pedido"
       />
+      <div>
+      <div class="pag"><a class="link" href="./index.html">Cad. de Pedido</a></div>
+      <div class="pagnor"><a class="linknor" href="./pedidos.html">Pedidos</a></div>
+      <div class="pagnor"><a class="linknor" href="./vendas.html">Res. de vendas</a></div>
+      <div class="pagnor"><a class="linknor" href="./qrcode.html">Gerador de Qrcode</a></div>
+
+
+        
+      </div>
+      
     </div>
 
     <div class="form-container">
@@ -24,6 +30,7 @@
       <form class="pedidoForm" id="pedidoForm">
 
         <h1>Dados do Pedido</h1>
+        <h3>Preencha as informações <br>abaixo para registrar um novo pedido.</h3>
         <div class="config-div">
           <div class="metade">
             <label for="cliente">Nome do Cliente</label>
@@ -87,7 +94,7 @@
         </div>
       </form>
     </div>
-    <script src="/public/script.js"></script>
+    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
 
   

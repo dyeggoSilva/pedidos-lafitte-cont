@@ -29,20 +29,21 @@ db.run(`CREATE TABLE IF NOT EXISTS pedidos (
   produtos TEXT,
   dataPedido TEXT NOT NULL,
   dataPagamento TEXT,
-  vendedor TEXT
+  vendedor TEXT,
+  valorPedido TEXT
 )`);
 
 // Rota: Criar pedido
 app.post('/pedidos', (req, res) => {
-  const { nome, telefone, os, produtos, dataPedido, dataPagamento, vendedor } = req.body;
+  const { nome, telefone, os, produtos, dataPedido, dataPagamento, vendedor, valorPedido } = req.body;
 
   if (!nome || !dataPedido) {
     return res.status(400).json({ mensagem: 'Campos obrigatórios ausentes.' });
   }
 
-  const sql = `INSERT INTO pedidos (nome, telefone, os, produtos, dataPedido, dataPagamento, vendedor)
-               VALUES (?, ?, ?, ?, ?, ?, ?)`;
-  const params = [nome, telefone, os, produtos, dataPedido, dataPagamento, vendedor];
+  const sql = `INSERT INTO pedidos (nome, telefone, os, produtos, dataPedido, dataPagamento, vendedor, valorPedido)
+               VALUES (?, ?, ?, ?, ?, ?, ?,?)`;
+  const params = [nome, telefone, os, produtos, dataPedido, dataPagamento, vendedor, valorPedido];
 
   db.run(sql, params, function (err) {
     if (err) {
